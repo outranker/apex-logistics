@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
-    // "gatsby-source-filesystem",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

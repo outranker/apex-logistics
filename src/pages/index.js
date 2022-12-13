@@ -1,21 +1,47 @@
 import * as React from "react";
-import StyledBackgroundSection from "../components/StyledBackgroundSection";
+import { ThemeProvider } from "styled-components";
+import * as styles from "./index.module.css";
+import { theme, GlobalStyles } from "../styles";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  width: "100%",
-  display: "inline-block",
-};
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  // const logoImage = getImage(data.mdx.frontmatter.hero_image);
+
   return (
-    <main style={pageStyles}>
-      <StyledBackgroundSection />
-    </main>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <div>
+        <header className={styles.headerheader}>
+          {/* <img alt="Apex Logistics Uychi Logo" src={logoImage} */}
+          <nav>
+            <ul>
+              <li>Services</li>
+              <li>Contacts</li>
+              <li>Header 3</li>
+              <li>Header 4</li>
+            </ul>
+          </nav>
+        </header>
+        <main className={styles.mainContainer}>
+          <section className={styles.hero}>
+            <div className={styles.heroLeftSide}></div>
+            <div className={styles.heroRightSide}></div>
+          </section>
+        </main>
+        <footer>
+          <ul>
+            <li>Footer 1</li>
+            <li>Footer 2</li>
+            <li>Footer 3</li>
+            <li>Footer 4</li>
+            <li>Footer 5</li>
+          </ul>
+        </footer>
+      </div>
+    </ThemeProvider>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Apex Logistics | Uychi</title>;
