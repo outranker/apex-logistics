@@ -15,13 +15,11 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
-    // "gatsby-source-filesystem",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-background-image",
       options: {
-        // add your own characters to escape, replacing the default ':/'
         specialChars: "/:",
       },
     },
