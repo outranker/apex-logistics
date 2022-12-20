@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import * as styles from "./index.module.css";
 import { theme, GlobalStyles } from "../styles";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Header from "../components/Header";
 
 const IndexPage = ({ data }) => {
   // const logoImage = getImage(data.mdx.frontmatter.hero_image);
@@ -11,17 +12,18 @@ const IndexPage = ({ data }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <div>
-        <header className={styles.headerheader}>
-          {/* <img alt="Apex Logistics Uychi Logo" src={logoImage} */}
-          <nav>
-            <ul>
-              <li>Services</li>
-              <li>Contacts</li>
-              <li>Header 3</li>
-              <li>Header 4</li>
-            </ul>
-          </nav>
-        </header>
+        {/* <header className={styles.headerheader}> */}
+        <Header />
+        {/* <img alt="Apex Logistics Uychi Logo" src={logoImage} */}
+        <nav>
+          <ul>
+            <li>Services</li>
+            <li>Contacts</li>
+            <li>Header 3</li>
+            <li>Header 4</li>
+          </ul>
+        </nav>
+        {/* </header>white_logo_transparent_background.png */}
         <main className={styles.mainContainer}>
           <section className={styles.hero}>
             <div className={styles.heroLeftSide}></div>
