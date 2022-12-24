@@ -29,5 +29,7 @@ export const GlobalStyles = createGlobalStyle`
   color: $color-grey-dark-2;
   font-weight: 300;
   line-height: 1.6;
+  font-size: 1.8rem;
+  position: relative;
 }
 `;
